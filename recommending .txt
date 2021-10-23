@@ -1,0 +1,9 @@
+nodemon index
+
+
+npm install -g nodemon 
+npm install -g nodemon --save 
+npm install --save-dev nodemon 
+npm install -g nodemon@debug 
+
+npm install -g --force nodemon

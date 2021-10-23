@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>chat</title>
+    <script src="js/socket.io.min.js"></script>
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+        
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .container img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        
+        .container img.right {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+        
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+        
+        .time-left {
+            float: left;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="color: #FFF;">Chat Messages</h2>
+    <div class="output"></div>
+
+    <div class="chats"></div>
+    <div class="send-div">
+        <div class="row g-3 mb-3 mt-1 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label text-white">UserName</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="UserName" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        <textarea id="message"></textarea>
+        <button type="button" id="send">send</button>
+    </div>
+    <script src="js/client.js"></script>
+</body>
+
+</html>
